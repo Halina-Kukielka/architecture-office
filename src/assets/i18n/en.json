@@ -1,0 +1,47 @@
+{
+  "header": {
+    "projects": "Projects",
+    "about": "About us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "about": {
+    "text": "Your dream home starts here",
+    "text1": "We are an architectural firm specializing in the design and planning of modern, functional, and aesthetically pleasing homes. Our mission is to bring unique dreams to life and create sustainable solutions for every lifestyle."
+  },
+  "projects": {
+    "title": "Our projects",
+    "project1": "dom",
+    "project2": "dom",
+    "project3": "dom",
+    "project4": "dom",
+    "project5": "dom",
+    "project6": "dom"
+
+  },
+  "services": {
+    "title": "Services",
+    "serv1": "Designing Single-Family Homes",
+    "serv2": "Adapting Ready-Made Designs",
+    "serv3": "Project Consulting",
+    "serv4": "Author’s Supervision",
+    "serv5": "Interior Design",
+    "serv6": "Building Extensions and Modernizations"
+  },
+  "contact": {
+    "contactMe": "Contact me",
+    "email": " E-mail:",
+    "emailAddress": "max@mustermann.net",
+    "phone": "Phone: +49 123 45 67890",
+    "city": "12345 Musterstadt",
+    "street": "Musterstrasse 1,"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "name": "Max Mustermann",
+    "street": "Musterstrasse 1",
+    "city": "12345 Musterstadt",
+    "email": "E-mail: max@mustermann.net",
+    "phone": "Phone: +49 123 45 67890"
+  }
+}

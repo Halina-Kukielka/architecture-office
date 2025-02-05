@@ -1,0 +1,88 @@
+<div class="content-container">
+    <section class="about" id="about" [class.active]="activeSection === 'about'">
+        <div class="aboutText">
+            <h3>{{ 'about.text'|translate }}</h3>
+            <p>{{ 'about.text1'|translate }}</p>
+        </div>
+        <div *ngIf="!isSafariMobile() && !isFirefox()" class="banner"></div>
+    </section>
+
+    <section class="services" id="services" [class.active]="activeSection === 'services'">
+        <h2>{{ 'services.title'|translate }}</h2>
+        <ul class="fa-ul row">
+            <li class="col-sm-12 col-md-6">
+                <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                <p>{{ 'services.serv1'|translate }}</p>
+            </li>
+            <li class="col-sm-12 col-md-6">
+                <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                <p>{{ 'services.serv2'|translate }}</p>
+            </li>
+            <li class="col-sm-12 col-md-6">
+                <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                <p>{{ 'services.serv3'|translate }}</p>
+            </li>
+            <li class="col-sm-12 col-md-6">
+                <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                <p>{{ 'services.serv4'|translate }}</p>
+            </li>
+            <li class="col-sm-12 col-md-6">
+                <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                <p>{{ 'services.serv5'|translate }}</p>
+            </li>
+            <li class="col-sm-12 col-md-6">
+                <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                <p>{{ 'services.serv6'|translate }}</p>
+            </li>
+        </ul>
+    </section>
+
+    <div *ngIf="!isSafariMobile() && !isFirefox()" class="banner"></div>
+    <section class="projects" id="projects" [class.active]="activeSection === 'projects'">
+        <h2>{{ 'projects.title' | translate }}</h2>
+        <div class="gallery">
+            <div class="gallery-item" *ngFor="let project of projects; let i = index">
+                <img
+                        [src]="project.thumbnail"
+                        [alt]="project.title"
+                        class="img-fluid"
+                        (click)="openModal(project.fullImage, i)"
+                />
+            </div>
+        </div>
+
+        <div class="modal" [ngClass]="{'open': modalOpen}">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img class="modal-image" [src]="modalImage" alt="image"/>
+                <button class="prev" (click)="prevImage()"> <</button>
+                <button class="next" (click)="nextImage()"> ></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" [class.active]="activeSection === 'contact'">
+        <div class="contactText">
+      <span>
+      <h2>{{ 'contact.contactMe'|translate }}</h2>
+      <br>
+      <span>
+        <i class="fa fa-envelope"></i>
+        <span>{{ 'contact.email'|translate }}</span>
+          <a class="emailLink">
+            {{ 'contact.emailAddress'|translate }}</a></span>
+      </span>
+            <br>
+            <br>
+            <span>
+        <i class="fa fa-phone icon"></i>
+                {{ 'contact.phone'|translate }}</span>
+            <br>
+            <br>
+            <span>
+        <i class="fa fa-home icon"></i>
+                {{ 'contact.street'|translate }} {{ 'contact.city'|translate }}
+      </span>
+        </div>
+    </section>
+</div>

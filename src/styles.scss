@@ -1,0 +1,277 @@
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "variables";
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/assets/fonts/Montserrat-Regular.ttf');
+}
+
+body {
+  background-image: url("/assets/images/marmour.jpg");
+  font-family: Montserrat-Regular, Arial, sans-serif;
+  color: $font-color !important;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+}
+
+h2,h3 {
+  color: $gold-color;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+.banner {
+  margin-top: 50px;
+  background-image: url("/assets/images/livingroom.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 668px) {
+  .banner {
+    min-height: 250px;
+    height: auto;
+  }
+}
+
+@media (min-width: 669px) {
+  .banner {
+    min-height: 300px;
+    height: auto;
+  }
+}
+
+.aboutText {
+  margin-bottom: 10px;
+  padding: 3%;
+  color: $font-color;
+  text-align: justify;
+}
+
+.services {
+  padding: 3%;
+  background-color: $background-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: $font-color;
+}
+
+.services > ul > li > p {
+  margin-right: 20px;
+}
+
+.fa-li {
+  margin-left: 10px;
+}
+
+li:hover {
+  color: $gold-color;
+}
+
+ul {
+  padding: 20px;
+}
+
+.projects {
+  padding: 3%;
+}
+
+.contact {
+  display: flex;
+  flex: 1;
+  padding: 3%;
+  background-color: $background-color;
+}
+
+
+.contactText {
+  flex: 1;
+  text-align: left;
+  margin: 20px;
+}
+
+.emailLink {
+  text-decoration: none;
+  color: $font-color;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.emailLink:hover {
+  text-decoration: underline;
+  color: $gold-color;
+}
+
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+  .services {
+    flex-direction: column;
+  }
+}
+
+.projects .gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.projects .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.projects .gallery-item:hover {
+  border-color: $gold-color;
+}
+
+.projects .gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.projects .gallery-item img:hover {
+  transform: scale(1.1);
+  border-color: $gold-color;
+}
+
+.projects .gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.projects .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.projects .modal.open {
+  display: block;
+}
+
+.projects .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border: 2px solid $gold-color;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.projects .modal-content .modal-image {
+  width: 100%;
+  max-width: 700px;
+  object-fit: contain;
+  border-radius: 8px;
+  max-height: 500px;
+}
+
+
+.projects .close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 36px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.projects .modal-content .prev,
+.projects .modal-content .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $gold-color;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.projects .modal-content .prev:hover,
+.projects .modal-content .next:hover {
+  background-color: darken($gold-color, 10%);
+}
+
+.projects .modal-content .prev {
+  left: 10px;
+}
+
+.projects .modal-content .next {
+  right: 10px;
+}
+
+.projects .close:hover,
+.projects .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .projects .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .modal-content .prev,
+  .projects .modal-content .next {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects .gallery {
+    grid-template-columns: 1fr;
+  }
+}

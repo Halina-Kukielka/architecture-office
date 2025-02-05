@@ -1,0 +1,14 @@
+<div class="footer">
+    <a class="imprint btn"
+       (click)="showImprint()">
+        {{ 'footer.imprint'|translate }}
+    </a>
+    <section *ngIf="show" class="hidden">
+        <p>{{ 'footer.name'|translate }}</p>
+        <p>{{ 'footer.street'|translate }}</p>
+        <p>{{ 'footer.city'|translate }}</p>
+        <p>{{ 'footer.email'|translate }}</p>
+        <p>{{ 'footer.phone'|translate }}</p>
+    </section>
+    <div id="imprintEnd" #imprintEnd></div>
+</div>

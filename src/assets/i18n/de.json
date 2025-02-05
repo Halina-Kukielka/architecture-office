@@ -1,0 +1,48 @@
+{
+  "header": {
+    "projects": "Projekte",
+    "services": "Dienstleistungen",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "text": "Ihr Traumhaus beginnt hier",
+    "text1": "Wir sind ein Architekturbüro, das sich auf die Planung und Gestaltung moderner, funktionaler und ästhetischer Häuser spezialisiert hat. Unsere Mission ist es, individuelle Träume zu verwirklichen und nachhaltige Lösungen für jede Lebenssituation zu schaffen."
+  },
+  "projects": {
+    "title": "Unsere Projekte",
+    "project1": "dom",
+    "project2": "dom",
+    "project3": "dom",
+    "project4": "dom",
+    "project5": "dom",
+    "project6": "dom"
+  },
+  "services": {
+    "title": "Dienstleistungen",
+    "serv1": "Planung von Einfamilienhäusern",
+    "serv2": "Anpassung von fertigen Projekten",
+    "serv3": "Projektberatung",
+    "serv4": "Autorenaufsicht",
+    "serv5": "Innenarchitektur",
+    "serv6": "Umbauten und Modernisierungen"
+  },
+  "contact": {
+    "contactMe": "Kontakt",
+    "email": " E-mail:",
+    "emailAddress": "max@mustermann.net",
+    "phone": "Telefonnummer: +49 123 45 67890",
+    "city": "12345 Musterstadt",
+    "street": "Musterstrasse 1,"
+  },
+
+  "footer": {
+    "imprint": "Impressum",
+    "name": "Max Mustermann",
+    "street": "Musterstrasse 1",
+    "city": "12345 Musterstadt",
+    "email": "E-mail: max@mustermann.net",
+    "phone": "Tel. +49 123 45 67890"
+
+  }
+}
