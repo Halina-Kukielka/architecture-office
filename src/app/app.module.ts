@@ -10,6 +10,8 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {BrowserService} from "./browser.service";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,7 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
                 deps: [HttpClient]
             }
         }),
-        TranslateModule
+        TranslateModule,
+        BrowserAnimationsModule,
+        MatIconModule
     ],
 
     providers: [BrowserService,
